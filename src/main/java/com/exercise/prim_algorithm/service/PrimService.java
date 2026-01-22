@@ -13,6 +13,11 @@ public interface PrimService {
         System.out.println("Using implementation: " + implementationName());
         System.out.println("You can change the implementation in configuration/BeanConfig.java");
         System.out.println("------------------------------------------------------------------------");
-        return calculateMST(graph, first);
+        System.out.println("GRAPH:");
+        System.out.println(graph);
+        Graph minimumSpanningTree = calculateMST(graph, first);
+        System.out.println("MINIMUM SPANNING TREE:");
+        System.out.println(minimumSpanningTree);
+        return minimumSpanningTree;
     }
 }

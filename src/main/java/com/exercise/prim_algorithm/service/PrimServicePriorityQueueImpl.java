@@ -11,8 +11,6 @@ import java.util.PriorityQueue;
 public class PrimServicePriorityQueueImpl implements PrimService {
     @Override
     public Graph calculateMST(@NonNull Graph graph, @NonNull Vertex first) {
-        System.out.println("GRAPH:");
-        System.out.println(graph);
         Graph minimumSpanningTree = new Graph();
         minimumSpanningTree.addVertex(first);
         PriorityQueue<Edge> pq = new PriorityQueue<>(Comparator.comparingInt(Edge::getWeight));
@@ -24,8 +22,6 @@ public class PrimServicePriorityQueueImpl implements PrimService {
                 pq.addAll(graph.getAdjacencyList().get(edge.getTo()));
             }
         }
-        System.out.println("MINIMUM SPANNING TREE:");
-        System.out.println(minimumSpanningTree);
         return minimumSpanningTree;
     }
 
