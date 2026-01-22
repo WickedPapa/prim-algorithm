@@ -1,6 +1,7 @@
 package com.exercise.prim_algorithm;
 
 import com.exercise.prim_algorithm.helper.PrimHelper;
+import com.exercise.prim_algorithm.model.Graph;
 import com.exercise.prim_algorithm.service.PrimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationRunner;
@@ -20,7 +21,8 @@ public class PrimAlgorithmApplication {
 
 	@Bean
 	public ApplicationRunner startupRunner() {
-		return args -> primService.printInfoCalculateMST(PrimHelper.generateGraph(), PrimHelper.generateGraph().getAdjacencyList().keySet().iterator().next());
+		Graph graph = PrimHelper.generateGraph();
+		return args -> primService.printInfoCalculateMST(graph, graph.getAdjacencyList().keySet().iterator().next());
 	}
 
 }
