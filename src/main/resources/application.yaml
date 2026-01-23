@@ -3,5 +3,5 @@ spring:
     name: prim-algorithm
 
 prim:
-  #implementation: PRIORITY_QUEUE
-  implementation: SIMPLE
+  implementation: PRIORITY_QUEUE
+  #implementation: SIMPLE

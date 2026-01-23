@@ -11,7 +11,7 @@ public interface PrimService {
         System.out.println("------------------------------------------------------------------------");
         System.out.println("WELCOME TO PRIM'S ALGORITHM IMPLEMENTATION");
         System.out.println("Using implementation: " + implementationName());
-        System.out.println("You can change the implementation in configuration/BeanConfig.java");
+        System.out.println("You can change the implementation in the application.yaml");
         System.out.println("------------------------------------------------------------------------");
         System.out.println("GRAPH:");
         System.out.println(graph);
