@@ -15,9 +15,13 @@ public interface PrimService {
         System.out.println("------------------------------------------------------------------------");
         System.out.println("GRAPH:");
         System.out.println(graph);
+        long start = System.nanoTime();
         Graph minimumSpanningTree = calculateMST(graph, first);
+        long end = System.nanoTime();
+        long durationNs = end - start;
         System.out.println("MINIMUM SPANNING TREE:");
         System.out.println(minimumSpanningTree);
+        System.out.println("Execution time: " + durationNs + " ns (" + (durationNs / 1_000_000.0) + " ms)");
         return minimumSpanningTree;
     }
 }
