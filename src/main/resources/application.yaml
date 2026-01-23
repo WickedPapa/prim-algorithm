@@ -1,3 +1,7 @@
 spring:
   application:
     name: prim-algorithm
+
+prim:
+  #implementation: PRIORITY_QUEUE
+  implementation: SIMPLE
